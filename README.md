@@ -130,6 +130,7 @@ STATISTICS_TIME_WINDOW_SECONDS=60  # Configurável: 60, 120, etc.
 4. **Configurações**: Janela de tempo configurável via variável de ambiente
 5. **Documentação**: README e arquitetura documentada
 6. **Qualidade de Código**: Linting, tipagem forte e estrutura modular
+7. **Containerização**: Aplicação totalmente containerizada com Docker
 
 
 ## 🚀 Como Executar
@@ -156,4 +157,18 @@ npm test
 npm run build
 npm start
 ```
+
+#### Como executar com Docker:
+
+```bash
+# 1. Fazer build da imagem
+docker build -t itau-challenge .
+
+# 2. Executar o container
+docker run -p 3333:3333 itau-challenge
+```
+
+---
+
+**Made with❤️ by [nahtanPNG](https://github.com/nahtanPNG)**
 
