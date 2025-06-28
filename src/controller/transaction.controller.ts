@@ -9,21 +9,11 @@ import { InvalidFieldsValuesError } from '../errors/invalid-fields-values.error'
 import { NegativeValueError } from '../errors/negative-value-error';
 
 export class TransactionController {
-  private readonly createTransactionUseCase: CreateTransactionUsecase;
-  private readonly deleteTransactionUseCase: DeleteTransactionUsecase;
-  private readonly statisticsUseCase: StatisticsUsecase;
-  private readonly transactionService: TransactionService;
-
-  constructor() {
-    this.transactionService = new TransactionService();
-    this.createTransactionUseCase = new CreateTransactionUsecase(
-      this.transactionService,
-    );
-    this.deleteTransactionUseCase = new DeleteTransactionUsecase(
-      this.transactionService,
-    );
-    this.statisticsUseCase = new StatisticsUsecase(this.transactionService);
-  }
+  constructor(
+    private readonly createTransactionUseCase: CreateTransactionUsecase,
+    private readonly deleteTransactionUseCase: DeleteTransactionUsecase,
+    private readonly statisticsUseCase: StatisticsUsecase,
+  ) {}
 
   async create(request: Request, response: Response): Promise<void> {
     const registerBodySchema = z.object({
