@@ -21,7 +21,6 @@ export class CreateTransactionUsecase {
 
     const actualDate = dayjs(new Date());
     const transactionDate = dayjs(dateHour);
-    console.log(actualDate, transactionDate);
 
     if (transactionDate.isAfter(actualDate)) {
       throw new FutureTransactionError();
