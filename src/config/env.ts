@@ -9,6 +9,7 @@ const envSchema = z.object({
     .default('development'),
   PORT: z.coerce.number().default(3333),
   DATABASE_URL: z.string().url(),
+  STATISTICS_TIME_WINDOW_SECONDS: z.coerce.number().default(60),
 });
 
 const _env = envSchema.safeParse(process.env);

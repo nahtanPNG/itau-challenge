@@ -13,7 +13,6 @@ export class TransactionService implements TransactionRepository {
     };
 
     this.transactions.push(transaction);
-    console.log(this.transactions);
 
     return transaction;
   }
