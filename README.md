@@ -170,5 +170,5 @@ docker run -p 3333:3333 itau-challenge
 
 ---
 
-**Made with❤️ by [nahtanPNG](https://github.com/nahtanPNG)**
+**Made with ❤️ by [nahtanPNG](https://github.com/nahtanPNG)**
 
